@@ -4,7 +4,7 @@
 #' @docType package
 #' @import shiny
 #' @import plyr
-#' @importFrom reshape melt
+#' @import reshape
 #' @import ggplot2
 #' @import igraph
 #' @import cluster
