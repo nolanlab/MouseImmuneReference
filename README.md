@@ -25,7 +25,7 @@ Download the data file available here and save it anywhere on your computer. Lau
 library(MouseImmuneReference)
 MouseImmuneReference.run()
 ```
-When you launch the GUI you will be prompted to select the data file you just downloaded. After that a browser window will pop-up with the GUI running inside. To quit the GUI simply press ESC in your R session.
+When you launch the GUI you will be prompted to select the data file you just downloaded. After that a browser window will pop-up with the GUI running inside. The data will take a minute or so to load. When the data loading process is completed you will see a list of markers appearing in the right part of the interface. To quit the GUI simply press ESC in your R session.
 
 
 ## Explore the maps
