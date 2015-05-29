@@ -3,7 +3,7 @@ Title: MouseImmuneReference
 Description: "A reference map of the mouse immune system"
 Version: 0.1
 Authors@R: c(person("Pier Federico", "Gherardini", email = "federico.gherardini@gmail.com", role = c("aut", "cre")), 
-    person("Matthew H", "Spitzer", email = "spitzerm@stanford.edu", role= c("aut", "cre")))
+    person("Matthew H", "Spitzer", email = "spitzerm@stanford.edu", role= c("aut")))
 Depends:
 License: GPL-2
 LinkingTo:
