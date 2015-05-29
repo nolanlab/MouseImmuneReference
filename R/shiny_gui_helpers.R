@@ -82,7 +82,7 @@ get_graph_centering_transform <- function(x, y, svg.width, svg.height)
 get_graph <- function(sc.data, sel.graph, trans_to_apply) 
 {
     G <- sc.data$graphs[[sel.graph]]
-    edges <- get.edgelist(G, names = F) - 1
+    edges <- data.frame(get.edgelist(G, names = F) - 1)
     colnames(edges) <- c("source", "target")
     svg.width <- 1200
     svg.height <- 800
@@ -105,7 +105,10 @@ get_graph <- function(sc.data, sel.graph, trans_to_apply)
     edges <- cbind(edges, y1 = y[edges[, "source"] + 1], y2 = y[edges[, "target"] + 1])
     edges <- cbind(edges, id = 1:nrow(edges))
     print(G)
-    list(names = V(G)$Label, size = vertex.size / trans$scaling, type = V(G)$type, highest_scoring_edge = V(G)$highest_scoring_edge, links = edges, X = x, Y = y, trans_to_apply = trans_to_apply)
+    ret <- list(names = V(G)$Label, size = vertex.size / trans$scaling, type = V(G)$type, highest_scoring_edge = V(G)$highest_scoring_edge, X = x, Y = y, trans_to_apply = trans_to_apply)
+    ret <- c(ret, edges = list(edges))
+    
+    return(ret)
     
 }
 

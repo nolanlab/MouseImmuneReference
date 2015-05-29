@@ -11,6 +11,14 @@ $.extend(networkOutputBinding, {
             {
                 nodes.push({"name": data.names[i], "X": data.X[i], "Y": data.Y[i], "type": data.type[i], "size": data.size[i], "highest_scoring_edge" : data.highest_scoring_edge[i]})
             }
+            
+            var lin = new Array();
+            var edges = data.edges;
+            for(var i = 0; i < edges.id.length; i++)
+            {
+	            lin.push({"x1" : edges.x1[i], "x2" : edges.x2[i], "y1" : edges.y1[i], "y2" : edges.y2[i], "source" : edges.source[i], "target" : edges.target[i], "id" : edges.id[i]})
+            }
+            
             function rescale()
             {
                 vis.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
@@ -19,7 +27,6 @@ $.extend(networkOutputBinding, {
             var width = 1200;
             var height = 800;
          
-            var lin = data.links;
             var zoom = d3.behavior.zoom()
                 .scaleExtent([0.01, 10])
                 .on("zoom", rescale);
