@@ -19,7 +19,7 @@ install_github("nolanlab/MouseImmuneReference")
 
 # Usage
 
-Download the data file available here and save it anywhere on your computer. Launch the MouseImmuneReference GUI by typing the following commands in an R session
+Download the data file available (here)[http://www.cytobank.org/nolanlab/reports/Spitzer2015.html] and save it anywhere on your computer. Launch the MouseImmuneReference GUI by typing the following commands in an R session
 
 ```
 library(MouseImmuneReference)
