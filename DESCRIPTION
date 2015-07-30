@@ -12,5 +12,5 @@ Imports:
     reshape,
     shiny,
     ggplot2,
-    igraph (< 1.0.0)
+    igraph
 LazyData: true

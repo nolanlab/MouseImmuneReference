@@ -104,7 +104,7 @@ get_graph <- function(sc.data, sel.graph, trans_to_apply)
     edges <- cbind(edges, x1 = x[edges[, "source"] + 1], x2 = x[edges[, "target"] + 1])
     edges <- cbind(edges, y1 = y[edges[, "source"] + 1], y2 = y[edges[, "target"] + 1])
     edges <- cbind(edges, id = 1:nrow(edges))
-    print(G)
+    #print(G)
     ret <- list(names = V(G)$Label, size = vertex.size / trans$scaling, type = V(G)$type, highest_scoring_edge = V(G)$highest_scoring_edge, X = x, Y = y, trans_to_apply = trans_to_apply)
     ret <- c(ret, edges = list(edges))
     
