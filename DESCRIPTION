@@ -10,5 +10,7 @@ LinkingTo:
 Imports:
     plyr,
     reshape,
-    shiny
+    shiny,
+    ggplot2,
+    igraph (< 1.0.0)
 LazyData: true
